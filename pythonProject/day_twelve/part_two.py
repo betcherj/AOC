@@ -2,6 +2,8 @@
 with open("data.txt", "r") as f:
     data = [[x for x in line.strip()] for line in f.readlines()]
 
+
+
 def get_region(x, y, target_value, data, visited):
     stack = [(x, y)]
     fencing = 0
@@ -60,5 +62,3 @@ for i in range(len(data)):
                 print(row)
             total_fencing += region_fencing*num_visited
 print(total_fencing)
-
-
